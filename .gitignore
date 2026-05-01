@@ -1,7 +1,9 @@
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 
-# build outputs
+# Build outputs
 publish/
 Lumina-Package-*/
 Lumina-*.dmg
@@ -11,9 +13,24 @@ v2rayN-macos-*/
 v2rayN-windows-*/
 v2rayN-linux-*/
 
-# logs
+# .NET / C# build outputs
+**/bin/
+**/obj/
+**/Debug/
+**/Release/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Generated files
+**/FodyWeavers.xsd
+
+# Logs
 *.log
 
 # IDE / temp
 .vscode/
 .idea/
+*.swp
+*.tmp
