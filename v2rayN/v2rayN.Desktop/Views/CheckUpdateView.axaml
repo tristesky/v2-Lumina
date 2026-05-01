@@ -70,7 +70,7 @@
                                     Grid.Column="1"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Center"
-                                    Text="{Binding CoreType}" />
+                                    Text="{Binding DisplayName}" />
                                 <TextBlock
                                     Grid.Column="2"
                                     HorizontalAlignment="Left"

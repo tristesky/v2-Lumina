@@ -53,12 +53,15 @@ public class CheckUpdateViewModel : MyReactiveObject
 
     private CheckUpdateModel GetCheckUpdateModel(string coreType)
     {
+        var displayName = coreType == _v2rayN ? Global.AppName : coreType;
+
         if (coreType == _v2rayN && Utils.IsPackagedInstall())
         {
             return new()
             {
                 IsSelected = false,
                 CoreType = coreType,
+                DisplayName = displayName,
                 Remarks = ResUI.menuCheckUpdate + " (Not Support)",
             };
         }
@@ -67,6 +70,7 @@ public class CheckUpdateViewModel : MyReactiveObject
         {
             IsSelected = _config.CheckUpdateItem.SelectedCoreTypes?.Contains(coreType) ?? true,
             CoreType = coreType,
+            DisplayName = displayName,
             Remarks = ResUI.menuCheckUpdate,
         };
     }
